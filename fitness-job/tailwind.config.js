@@ -20,6 +20,7 @@ export default {
       },
     },
     screens: {
+      maxsm: { max: "768px" },
       xs: "480px",
       ss: "620px",
       sm: "768px",

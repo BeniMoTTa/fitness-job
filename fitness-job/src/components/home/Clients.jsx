@@ -1,5 +1,5 @@
-import { clients } from "../mock";
-import styles from "../style";
+import { clients } from "../../mock";
+import styles from "../../style";
 
 const Clients = () => (
   <section className={`${styles.flexCenter} my-4`}>

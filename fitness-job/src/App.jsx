@@ -1,15 +1,15 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import Business from "./components/Business";
-import Billing from "./components/Billing";
-import CardDeal from "./components/CardDeal";
-import Testimonials from "./components/Testimonials";
-import Clients from "./components/Clients";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+import Header from "./components/home/Header";
+import Hero from "./components/home/Hero";
+import Stats from "./components/home/Stats";
+import Business from "./components/home/Business";
+import Billing from "./components/home/Billing";
+import CardDeal from "./components/home/CardDeal";
+import Testimonials from "./components/home/Testimonials";
+import Clients from "./components/home/Clients";
+import CTA from "./components/home/CTA";
+import Footer from "./components/home/Footer";
 import styles from "./style";
-import Weight from "./components/Weight";
+import Weight from "./components/home/Weight";
 
 function App() {
   return (

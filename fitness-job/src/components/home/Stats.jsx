@@ -1,5 +1,5 @@
-import { stats } from "../mock";
-import styles from "../style";
+import { stats } from "../../mock";
+import styles from "../../style";
 
 const Stats = () => (
   <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>

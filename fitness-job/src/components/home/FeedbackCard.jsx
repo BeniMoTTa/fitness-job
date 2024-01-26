@@ -1,4 +1,4 @@
-import { quotes } from "../assets";
+import { quotes } from "../../assets";
 
 // eslint-disable-next-line react/prop-types
 const FeedbackCard = ({ content, name, title, img }) => (

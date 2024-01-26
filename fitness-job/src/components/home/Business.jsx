@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { features } from "../mock";
-import styles, { layout } from "../style";
+import { features } from "../../mock";
+import styles, { layout } from "../../style";
 import Button from "./Button";
 
 const FeatureCard = ({ icon, title, content, index }) => (

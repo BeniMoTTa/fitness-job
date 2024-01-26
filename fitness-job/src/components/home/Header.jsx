@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import close from "../assets/close.svg";
+import close from "../../assets/close.svg";
 
-import menu from "../assets/menu.svg";
+import menu from "../../assets/menu.svg";
 
-import { navBts } from "../mock/index.js";
+import { navBts } from "../../mock/index.js";
 
 const Header = () => {
   const [active, setActive] = useState("Home");

@@ -1,5 +1,5 @@
-import { feedback } from "../mock";
-import styles from "../style";
+import { feedback } from "../../mock";
+import styles from "../../style";
 import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => (
