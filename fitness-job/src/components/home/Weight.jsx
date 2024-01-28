@@ -1,10 +1,35 @@
 import InfoWeight from "./InfoWeight";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Weight = () => {
   const [height, setHeight] = useState("");
   const [showInfoWeight, setShowInfoWeight] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [calculatedBMI, setCalculatedBMI] = useState(null);
+
+  const calculateBMI = () => {
+    if (height) {
+      // Convert height from centimeters to meters
+      const heightInMeters = parseFloat(height) / 100;
+
+      // Use a range of BMI values for a more realistic ideal weight range
+      const bmiRange = [18.5, 24.9]; // Healthy BMI range
+
+      const minIdealWeight = bmiRange[0] * Math.pow(heightInMeters, 2);
+      const maxIdealWeight = bmiRange[1] * Math.pow(heightInMeters, 2);
+
+      setCalculatedBMI({
+        min: minIdealWeight.toFixed(1),
+        max: maxIdealWeight.toFixed(1),
+      });
+    } else {
+      setCalculatedBMI({ min: 0, max: 0 }); // Set 0 for both results when input is empty
+    }
+  };
+
+  useEffect(() => {
+    calculateBMI();
+  }, [height]);
 
   const handleChangeHeight = (e) => {
     const typeHeight = e.target.value;
@@ -19,7 +44,8 @@ const Weight = () => {
 
   return (
     <div
-      className={`h-fit pb-32 pt-20 bg-black flex justify-center flex-col items-center transition-height duration-500 ease-in-out ${
+      id="test"
+      className={`h-fit pb-32 pt-20 background-animated border-t-2 border-b-2 border-white flex justify-center text-justify px-4 flex-col items-center transition-height duration-500 ease-in-out ${
         showInfo ? "h-auto" : "h-fit"
       }`}
     >
@@ -33,31 +59,32 @@ const Weight = () => {
         atual.
       </h3>
       <div className="flex w-full justify-center pt-10 maxsm:flex-col max-w-[1400px]">
-        <form className=" shadow-md rounded w-[50%] h-full flex-auto items-center maxsm:w-full px-8 pt-6 pb-8">
-          <div className="flex h-full justify-center items-center">
-            <input
-              className="shadow h-12 font-merriweather text-xl  appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="height"
-              type="number"
-              placeholder="Coloque sua altura em centímetros..."
-              value={height}
-              onChange={handleChangeHeight}
-            />
-          </div>
-        </form>
+        <div className="input-container w-[50%] h-full maxsm:w-full pb-8 ">
+          <input
+            className=""
+            id="height"
+            type="number"
+            placeholder="Coloque sua altura em centímetros..."
+            value={height}
+            onChange={handleChangeHeight}
+            inputMode="numeric"
+            pattern="[0-9]*"
+          />
+        </div>
+
         <div className="h-full w-[1px] bg-white"></div>
         {showInfoWeight && (
-          <div className=" hide-info-weight shadow-md rounded px-8 pt-6 w-[50%] maxsm:w-full pb-8 mb-4 translate-x-0 sm:translate-x-full">
+          <div className=" hide-info-weight  px-8 pt-6 w-[50%] maxsm:w-full pb-8 mb-4 translate-x-0 sm:translate-x-full">
             <h4 className="text-cover text-xl font-merriweather">
               Seu peso ideal está entre:
             </h4>
-            <p className="font-poppins h-full font-extrabold w-full text-[80px] flex justify-center mt-1 gradient-text">
-              50{" "}
+            <p className="font-poppins h-full font-extrabold w-full text-[80px] flex maxsm:text-[50px] justify-center mt-1 gradient-text">
+              {calculatedBMI ? calculatedBMI.min : ""}
               <span className="h-full  flex mx-4 text-[20px] items-center">
                 a
-              </span>{" "}
-              75
-              <span className="text-cover text-xl h-full flex items-end ">
+              </span>
+              {calculatedBMI ? calculatedBMI.max : ""}
+              <span className="text-cover text-xl h-full flex items-end">
                 kg
               </span>
             </p>

@@ -1,17 +1,36 @@
+import { useState, useEffect } from "react";
 import Header from "./components/home/Header";
-import Hero from "./components/home/Hero";
 import Stats from "./components/home/Stats";
 import Business from "./components/home/Business";
 import Billing from "./components/home/Billing";
 import CardDeal from "./components/home/CardDeal";
 import Testimonials from "./components/home/Testimonials";
-import Clients from "./components/home/Clients";
-import CTA from "./components/home/CTA";
 import Footer from "./components/home/Footer";
 import styles from "./style";
 import Weight from "./components/home/Weight";
+import Seller from "./components/home/Seller";
+import { FiArrowUp } from "react-icons/fi";
+import StartHeader from "./components/home/Hero";
 
 function App() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    setShowBackToTop(scrollPosition > window.innerHeight);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -21,9 +40,10 @@ function App() {
       </div>
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero />
+          <StartHeader />
         </div>
       </div>
+
       <div>
         <Weight />
       </div>
@@ -34,11 +54,18 @@ function App() {
           <Billing />
           <CardDeal />
           <Testimonials />
-          <Clients />
-          <CTA />
+          <Seller />
           <Footer />
         </div>
       </div>
+      {showBackToTop && (
+        <button
+          className="w-[55px] h-[55px] rounded-full flex justify-center items-center fixed right-[40px] bottom-[80px] text-white bg-gradient-to-tl from-[#ff7b59] to-[#ff4500] border-[2px] border-white hover:shadow-2xl transform text-[30px] hover:scale-105 transition-transform backtotop"
+          onClick={scrollToTop}
+        >
+          <FiArrowUp />
+        </button>
+      )}
     </div>
   );
 }

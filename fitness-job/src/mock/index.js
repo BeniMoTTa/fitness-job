@@ -1,19 +1,14 @@
 import {
-  people01,
-  people02,
-  people03,
   facebook,
   instagram,
   linkedin,
   twitter,
-  airbnb,
-  binance,
-  coinbase,
-  dropbox,
   send,
   shield,
   star,
 } from "../assets";
+
+import book from "../assets/book.svg";
 
 export const navBts = [
   {
@@ -21,13 +16,14 @@ export const navBts = [
     title: "Home",
   },
   {
-    id: "features",
+    id: "test",
     title: "Teste",
   },
   {
-    id: "sobre",
-    title: "Sobre mim",
+    id: "benefics",
+    title: "Benefícios",
   },
+
   {
     id: "clients",
     title: "Clientes",
@@ -37,24 +33,31 @@ export const navBts = [
 export const features = [
   {
     id: "feature-1",
-    icon: star,
-    title: "Rewards",
+    icon: shield,
+    title: "100% Seguro",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "Qualquer transação financeira será mediante bancos licenciados e autorizados.",
   },
   {
     id: "feature-2",
-    icon: shield,
-    title: "100% Secured",
+    icon: star,
+    title: "Material exclusivo",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      "Lives especiais para os mais próximos, com dicas para alimentação saudável e exercícios",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "Balance Transfer",
+    icon: book,
+    title: "+ Livros de receitas",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Livros de receitas personalizadas ao seu gosto e boas práticas na preparação",
+  },
+  {
+    id: "feature-4",
+    icon: send,
+    title: "Contato",
+    content:
+      "Terá acesso a uma plataforma especial para contato direto comigo.",
   },
 ];
 
@@ -62,108 +65,104 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-    name: "Herman Jensen",
-    title: "Founder & Leader",
-    img: people01,
+      "Emagreci 3kg em 1 semana, muito obrigada por tudo, estou muito mais auto confiante.",
+    name: "Julia Martinez",
+    title: "Advogada",
+    img: "https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg",
   },
   {
     id: "feedback-2",
     content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Steve Mark",
-    title: "Founder & Leader",
-    img: people02,
+      "Estou muito satisfeito, consegui ter o corpo que sempre sonhei, objetivo concluído!",
+    name: "João pedro Ferreira",
+    title: "Jornalista",
+    img: "https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg",
   },
   {
     id: "feedback-3",
     content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Kenn Gallagher",
-    title: "Founder & Leader",
-    img: people03,
+      "Incrível, parece que consigo muito mais coisas que dias atrás, e com muita mais disposição, super satisfeitos, eu e meu marido",
+    name: "Maria Izabel",
+    title: "Enfermeira (Aposentada)",
+    img: "https://img.freepik.com/fotos-gratis/casal-de-tiro-medio-posando-juntos_23-2148984296.jpg",
   },
 ];
 
 export const stats = [
   {
     id: "stats-1",
-    title: "User Active",
-    value: "3800+",
+    title: "Anos de experiência",
+    value: "8+",
   },
   {
     id: "stats-2",
-    title: "Trusted by Company",
-    value: "230+",
+    title: "Clientes satisfeitos",
+    value: "100+",
   },
   {
     id: "stats-3",
-    title: "Transaction",
-    value: "$230M+",
+    title: "Atletas ensinados",
+    value: "20+",
   },
 ];
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Mais sobre nós",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "Como trabalhamos",
+        link: "#",
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "Login",
+        link: "#",
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
+        name: "Explorar",
+        link: "#",
       },
       {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        name: "Termos e Serviços",
+        link: "#",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Comunidade",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        name: "Ajuda",
+        link: "#",
       },
       {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
+        name: "Parceiros",
+        link: "#",
       },
       {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
+        name: "Sugestões",
+        link: "#",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "#",
       },
       {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        name: "Notícias",
+        link: "#",
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Parceiros",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Nossos parceiros",
+        link: "#",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Ser um parceiro",
+        link: "#",
       },
     ],
   },
@@ -189,24 +188,5 @@ export const socialMedia = [
     id: "social-media-4",
     icon: linkedin,
     link: "https://www.linkedin.com/",
-  },
-];
-
-export const clients = [
-  {
-    id: "client-1",
-    logo: airbnb,
-  },
-  {
-    id: "client-2",
-    logo: binance,
-  },
-  {
-    id: "client-3",
-    logo: coinbase,
-  },
-  {
-    id: "client-4",
-    logo: dropbox,
   },
 ];

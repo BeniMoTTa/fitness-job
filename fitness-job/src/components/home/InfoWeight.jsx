@@ -26,20 +26,20 @@ const InfoWeight = () => {
       </h3>
       <ul className="list-none pl-6 pt-3">
         <li className="mb-2 flex items-center text-xl font-light">
-          <span className="inline-block w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+          <span className="inline-block min-w-4 h-4 bg-green-500 rounded-full mr-2"></span>
           Menor risco de doenças crônicas, incluindo cardiovasculares, diabetes
           tipo 2 e alguns tipos de câncer;
         </li>
         <li className="mb-2 flex items-center text-xl font-light">
-          <span className="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+          <span className="inline-block min-w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
           Melhora da saúde mental, autoestima e bem-estar;
         </li>
         <li className="mb-2 flex items-center text-xl font-light">
-          <span className="inline-block w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+          <span className="inline-block min-w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
           Maior capacidade física e resistência;
         </li>
         <li className="mb-2 flex items-center text-xl font-light">
-          <span className="inline-block w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+          <span className="inline-block min-w-4 h-4 bg-red-500 rounded-full mr-2"></span>
           Maior expectativa de vida.
         </li>
       </ul>
